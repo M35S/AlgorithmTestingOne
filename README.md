@@ -28,14 +28,14 @@ INSERTION-SORT (A)
 ## Project Notes
 
 Some things to note:
-*`A` is denoted as the "array" input.
-*`A.length` is the arrray number quantity.
-*`key` is the main variable used for insertion.
-*`i` is used for comparing with the "key" value.
+- `A` is denoted as the "array" input.
+- `A.length` is the arrray number quantity.
+- `key` is the main variable used for insertion.
+- `i` is used for comparing with the "key" value.
 
 Another thing to note, you will see the following conditions:
-*`for (int j = 2 - 1...`
-*`while (i > 0 - 1...`
+- `for (int j = 2 - 1...`
+- `while (i > 0 - 1...`
 The reason for using "-1" is for the sake of sticking as close as possible to the original algorithm. As all programmers should know, array position starts with "0" as opposed to "1". I have also added a lot of cout's as a way to illustrate how each iteration and comparison is handled.
 
 ## Algorithm Execution Process
