@@ -29,13 +29,14 @@ INSERTION-SORT (A)
 
 Some things to note:
 - `A` is denoted as the "array" input.
-- `A.length` is the arrray number quantity.
+- `A.length` is the array number quantity.
 - `key` is the main variable used for insertion.
 - `i` is used for comparing with the "key" value.
 
 Another thing to note, you will see the following conditions:
 - `for (int j = 2 - 1...`
 - `while (i > 0 - 1...`
+
 The reason for using "-1" is for the sake of sticking as close as possible to the original algorithm. As all programmers should know, array position starts with "0" as opposed to "1". I have also added a lot of cout's as a way to illustrate how each iteration and comparison is handled.
 
 ## Algorithm Execution Process
@@ -84,4 +85,4 @@ After 5th (and final) Iteration:
 
 ## Final Thoughts
 
-I have learned a lot from studying this sorting algorithm, I aim to progress learn more algorithms and see what I can put to use for my own programs. I hope this has been insightul for you. On that note, happy coding and learning!
+I have learned a lot from studying this sorting algorithm, I aim to progress learn more algorithms and see what I can put to use for my own programs. I hope this has been insightful for you. On that note, happy coding and learning!
