@@ -3,10 +3,10 @@
 ## Contents
 
 - [Introduction](#introduction)
-- [Insertion Sort Algorithm Pseudocode](#insertion sort algorithm pseudocode)
-- [Project Notes](#project notes)
-- [Algorithm Execution Process](#algorithm execution process)
-- [Final Thoughts](#final thoughts)
+- [Insertion Sort Algorithm Pseudocode](#Insertion Sort Algorithm Pseudocode)
+- [Project Notes](#Project Notes)
+- [Algorithm Execution Process](#Algorithm Execution Process)
+- [Final Thoughts](#Final Thoughts)
 
 ## Introduction
 
