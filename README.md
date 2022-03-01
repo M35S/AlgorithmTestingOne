@@ -85,4 +85,4 @@ After 5th (and final) Iteration:
 
 ## Final Thoughts
 
-I have learned a lot from studying this sorting algorithm, I aim to progress learn more algorithms and see what I can put to use for my own programs. I hope this has been insightful for you. On that note, happy coding and learning!
+I have learned a lot from studying this sorting algorithm. I aim to learn more algorithms and see what I can put to use for my own programs. I hope this has been insightful for you. On that note, happy coding and learning!
