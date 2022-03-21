@@ -1,7 +1,13 @@
 #include <iostream>
 #include <vector>
 
+// Utility functions
+void printVectArray(const std::vector<int> &arr_p);
+void printArray(int A_p[], int size_p);
+
+// Sorting Algorithms
 void insertionSort(int array_p[], int arraySize_p);
+void insertionSortVector(std::vector<int> &vectArray_p);
 
 int main()
 {
@@ -13,10 +19,40 @@ int main()
 	int arrayTest2[] = { 9, 7, 11, 15, 19, 21, 5, 8 };
 	int arrayAmount2 = 8;
 	insertionSort(arrayTest2, arrayAmount2);
+	
+	std::cout << "\n";
+	
+	// ** Insertion-Sort Algorithm ** //
+	std::vector<int> vectArrayTest1 = { 6, 1, 3, 5, 2, 4 };
+	insertionSortVector(vectArrayTest1);
 
 	system("pause");
 
 	return 0;
+}
+
+void printVectArray(const std::vector<int> &arr_p)
+{
+	std::cout << "\n";
+	for (int i = 0; i < arr_p.size(); i++)
+	{
+		std::cout << "[" << i << "]\t";
+	}
+	std::cout << "\n";
+	for (int i = 0; i < arr_p.size(); i++)
+	{
+		std::cout << arr_p[i] << "\t";
+	}
+	std::cout << "\n\n";
+}
+
+void printArray(int A_p[], int size_p)
+{
+	std::cout << "\n";
+	for (int i = 0; i < size_p; i++)
+		std::cout << A_p[i] << ", ";
+
+	std::cout << "\n";
 }
 
 void insertionSort(int array_p[], int arraySize_p)
@@ -112,6 +148,65 @@ void insertionSort(int array_p[], int arraySize_p)
 	{
 		std::cout << array_p[index] << ", ";
 	}
+	std::cout << "\n********** Insertion-Sort End **********\n";
+	std::cout << std::endl << std::endl;
+}
+
+void insertionSortVector(std::vector<int> &vectArray_p)
+{
+	std::cout << "********** Insertion-Sort Begin **********\n";
+	std::cout << "The current array values are:\n";
+	// ** Array Indices ** //
+	for (int index = 0; index < vectArray_p.size(); index++)
+	{
+		std::cout << "[" << index << "]\t";
+	}
+	std::cout << std::endl;
+
+	// ** Array Values ** //
+	for (int index = 0; index < vectArray_p.size(); index++)
+	{
+		std::cout << " " << vectArray_p[index] << "\t";
+	}
+	std::cout << "\n\n";
+	
+	// Line 1: Iteration start
+	for (int j = 1; j < vectArray_p.size(); j++)
+	{
+		// Line 2: Setup key value
+		int keyValue = vectArray_p[j];
+
+		// Line 3: Setup comparison position
+		int i = j - 1;
+
+		// Line 4: Start comparison wave
+		while (i > - 1 && vectArray_p[i] > keyValue)
+		{
+			// Line 5: Swap neighbouring values
+			vectArray_p[i + 1] = vectArray_p[i];
+
+			// Line 6: Move comparitive position one step
+			i--;
+		}
+
+		// Line 7: Place key value into correct position
+		vectArray_p[i + 1] = keyValue;
+	}
+
+	std::cout << "\nSorted array values:\n";
+	// ** Array Indices ** //
+	for (int index = 0; index < vectArray_p.size(); index++)
+	{
+		std::cout << "[" << index << "]\t";
+	}
+	std::cout << std::endl;
+
+	// ** Array Values ** //
+	for (int index = 0; index < vectArray_p.size(); index++)
+	{
+		std::cout << " " << vectArray_p[index] << "\t";
+	}
+	std::cout << "\n\n";
 	std::cout << "\n********** Insertion-Sort End **********\n";
 	std::cout << std::endl << std::endl;
 }
