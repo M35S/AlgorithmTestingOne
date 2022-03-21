@@ -9,6 +9,8 @@ void printArray(int A_p[], int size_p);
 void insertionSort(int array_p[], int arraySize_p);
 void insertionSortVector(std::vector<int> &vectArray_p);
 
+void bubbleSort(std::vector<int> &array_p);
+
 // Searching Algorithms
 void binarySearch(std::vector<int> array_p, int searchItem_p);
 
@@ -266,5 +268,58 @@ void binarySearch(std::vector<int> array_p, int searchItem_p)
 		std::cout << "...not found!\n\n";
 
 	std::cout << "\n********** Binary Search End **********\n";
+	std::cout << std::endl << std::endl;
+}
+
+void bubbleSort(std::vector<int> &array_p)
+{
+	std::cout << "********** Bubble-Sort Begin **********\n";
+	std::cout << "The current array values are:\n";
+	// ** Array Indices ** //
+	for (int index = 0; index < array_p.size(); index++)
+	{
+		std::cout << "[" << index << "]\t";
+	}
+	std::cout << std::endl;
+
+	// ** Array Values ** //
+	for (int index = 0; index < array_p.size(); index++)
+	{
+		std::cout << " " << array_p[index] << "\t";
+	}
+	std::cout << "\n\n";
+	
+	// Line 1: for i = 1 to A.length
+	for (int iteration = 1; iteration < array_p.size(); iteration++)
+	{
+		// Line 2: for j = 0; if j < A.length - i
+		for (int index = 0; index < array_p.size() - iteration; index++)
+		{
+			// Line 3: if A[j] > A[j + 1]
+			if (array_p[index] > array_p[index + 1])
+			{
+				// Line 4: Exchange A[j] with A[j + 1]
+				int temp_t = array_p[index];
+				array_p[index] = array_p[index + 1];
+				array_p[index + 1] = temp_t;
+			}
+		}
+	}
+
+	std::cout << "\nSorted array values:\n";
+	// ** Array Indices ** //
+	for (int index = 0; index < array_p.size(); index++)
+	{
+		std::cout << "[" << index << "]\t";
+	}
+	std::cout << std::endl;
+
+	// ** Array Values ** //
+	for (int index = 0; index < array_p.size(); index++)
+	{
+		std::cout << " " << array_p[index] << "\t";
+	}
+	std::cout << "\n\n";
+	std::cout << "\n********** Bubble-Sort End **********\n";
 	std::cout << std::endl << std::endl;
 }
