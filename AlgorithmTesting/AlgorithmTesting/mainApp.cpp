@@ -9,6 +9,9 @@ void printArray(int A_p[], int size_p);
 void insertionSort(int array_p[], int arraySize_p);
 void insertionSortVector(std::vector<int> &vectArray_p);
 
+// Searching Algorithms
+void binarySearch(std::vector<int> array_p, int searchItem_p);
+
 int main()
 {
 	// ** Insertion-Sort Algorithm ** //
@@ -25,6 +28,9 @@ int main()
 	// ** Insertion-Sort Algorithm ** //
 	std::vector<int> vectArrayTest1 = { 6, 1, 3, 5, 2, 4 };
 	insertionSortVector(vectArrayTest1);
+	
+	// ** Binary-Search Algorithm ** //
+	binarySearch(vectArrayTest1, 5);
 
 	system("pause");
 
@@ -208,5 +214,57 @@ void insertionSortVector(std::vector<int> &vectArray_p)
 	}
 	std::cout << "\n\n";
 	std::cout << "\n********** Insertion-Sort End **********\n";
+	std::cout << std::endl << std::endl;
+}
+
+void binarySearch(std::vector<int> array_p, int searchItem_p)
+{
+	std::cout << "********** Binary Search Begin **********\n";
+	std::cout << "The current array values are:\n";
+	// ** Array Indices ** //
+	for (int index = 0; index < array_p.size(); index++)
+	{
+		std::cout << "[" << index << "]\t";
+	}
+	std::cout << std::endl;
+
+	// ** Array Values ** //
+	for (int index = 0; index < array_p.size(); index++)
+	{
+		std::cout << " " << array_p[index] << "\t";
+	}
+	std::cout << "\n\n";
+	
+	// low = 0
+	int first_t = 0;
+
+	// high = A.length - 1
+	int last_t = array_p.size() - 1;
+	int mid_t;
+
+	bool found_t = false;
+
+	// while low <= high and not found
+	while (first_t <= last_t && !found_t)
+	{
+		// middle = (low + high) / 2
+		mid_t = (first_t + last_t) / 2;
+
+		if (array_p[mid_t] == searchItem_p)		// Item found
+			found_t = true;
+		else if (array_p[mid_t] > searchItem_p)		// Guess too high
+			last_t = mid_t - 1;
+		else						// Guess too low
+			first_t = mid_t + 1;
+	}
+
+	std::cout << "Requested number: " << searchItem_p << " was...\n";
+
+	if (found_t)
+		std::cout << "...found at array location [" << mid_t << "]\n\n";
+	else
+		std::cout << "...not found!\n\n";
+
+	std::cout << "\n********** Binary Search End **********\n";
 	std::cout << std::endl << std::endl;
 }
